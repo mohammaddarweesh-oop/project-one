@@ -1,14 +1,21 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination, Navigation } from "swiper/core";
+import "swiper/swiper.min.css";
 import "./App.css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+SwiperCore.use([Pagination, Navigation]);
 
 function App() {
   return (
     <div className="App">
-      <h1>ENG Mohammad Darweesh</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur 
-      adipisicing elit. Maxime, sequi quos. Laborum 
-      voluptatibus ipsa sit repudiandae neque facere 
-      quasi qui veritatis 
-      earum. Soluta illum maxime magni asperiores aut facere nihil.</p>
+      <Swiper spaceBetween={50} slidesPerView={2} navigation pagination>
+        <SwiperSlide>Mohammad</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+      </Swiper>
     </div>
   );
 }
