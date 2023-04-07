@@ -1,5 +1,7 @@
 import "./App.css";
 import SwiperCrousal from "./Components/SwiperCrousal/SwiperCrousal";
+import ShapeOne from "./Components/ShapeOne/ShapeOne";
+import ShapeTwo from "./Components/ShapeTwo/ShapeTwo";
 
 function App() {
   // https://swiperjs.com/demos
@@ -18,7 +20,12 @@ function App() {
 
   return (
     <div className="App">
-      <SwiperCrousal useData={userData} />
+      <SwiperCrousal items={userData}>
+        <ShapeOne />
+      </SwiperCrousal>
+      <SwiperCrousal items={userData}>
+        <ShapeTwo />
+      </SwiperCrousal>
     </div>
   );
 }
