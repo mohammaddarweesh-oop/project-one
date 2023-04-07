@@ -40,7 +40,7 @@ const SwiperCrousal = ({ children, items, pagination, navigation }) => {
     <Swiper
       spaceBetween={50}
       slidesPerView={3}
-      navigation={navigation ? navigation : false}
+      navigation={navigation ? navigation : true}
       pagination={pagination ? pagination : false}
     >
       {cloneItem}
