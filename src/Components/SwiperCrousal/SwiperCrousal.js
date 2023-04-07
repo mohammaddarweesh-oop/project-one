@@ -8,7 +8,7 @@ import "./Style.css";
 
 SwiperCore.use([Pagination, Navigation]);
 
-const SwiperCrousal = ({ children, items }) => {
+const SwiperCrousal = ({ children, items, pagination, navigation }) => {
   // const view = () => {
   //   const viewSlide = useData.map((el) => (
   //     <SwiperSlide>
@@ -40,8 +40,8 @@ const SwiperCrousal = ({ children, items }) => {
     <Swiper
       spaceBetween={50}
       slidesPerView={3}
-      navigation
-      pagination={{ clickable: "true" }}
+      navigation={navigation ? navigation : false}
+      pagination={pagination ? pagination : false}
     >
       {cloneItem}
     </Swiper>

@@ -20,10 +20,14 @@ function App() {
 
   return (
     <div className="App">
-      <SwiperCrousal items={userData}>
+      <SwiperCrousal
+        items={userData}
+        navigation
+        pagination={{ clickable: "true" }}
+      >
         <ShapeOne />
       </SwiperCrousal>
-      <SwiperCrousal items={userData}>
+      <SwiperCrousal items={userData} pagination={{ clickable: "true" }}>
         <ShapeTwo />
       </SwiperCrousal>
     </div>
