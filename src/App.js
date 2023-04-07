@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <SwiperCrousal />
+      <SwiperCrousal useData={userData} />
     </div>
   );
 }
