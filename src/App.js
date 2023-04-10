@@ -13,7 +13,7 @@ function App() {
     { id: 5, name: "Same", email: "same@gmail.com", age: 33 },
     { id: 6, name: "Khaled", email: "khaled@gmail.com", age: 70 },
     { id: 5, name: "Faiza", email: "faiza@gmail.com", age: 23 },
-    { id: 5, name: "Dawood", email: "dawood@gmail.com", age: 14 },
+    { id: 5, name: "Dawood ahmad esmaeel", email: "dawood@gmail.com", age: 14 },
     { id: 5, name: "Moaath", email: "moaath@gmail.com", age: 18 },
     { id: 5, name: "Sulaiman", email: "Sulaiman@gmail.com", age: 24 },
   ];
@@ -21,13 +21,18 @@ function App() {
   return (
     <div className="App">
       <SwiperCrousal
+        slidesPerView={3}
         items={userData}
         navigation
         pagination={{ clickable: "true" }}
       >
         <ShapeOne />
       </SwiperCrousal>
-      <SwiperCrousal items={userData} pagination={{ clickable: "true" }}>
+      <SwiperCrousal
+        items={userData}
+        pagination={{ clickable: "true" }}
+        slidesPerView={2}
+      >
         <ShapeTwo />
       </SwiperCrousal>
     </div>
